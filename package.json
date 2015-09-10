@@ -1,0 +1,34 @@
+{
+  "name": "chai-virtual-dom",
+  "version": "1.0.0",
+  "description": "Chai plugin with assertions for virtual-dom",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/staltz/chai-virtual-dom.git"
+  },
+  "keywords": [
+    "virtual-dom",
+    "chai",
+    "mocha",
+    "test",
+    "vtree"
+  ],
+  "author": "Andre Staltz <andre+npm@staltz.com> (http://andre.staltz.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/staltz/chai-virtual-dom/issues"
+  },
+  "homepage": "https://github.com/staltz/chai-virtual-dom#readme",
+  "dependencies": {
+    "vdom-to-html": "^2.1.1"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.3.2",
+    "virtual-dom": "^2.1.1"
+  }
+}
