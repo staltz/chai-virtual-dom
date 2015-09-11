@@ -3,6 +3,7 @@
 [virtual-dom](https://github.com/Matt-Esch/virtual-dom) assertions for chai. Tests your virtual-dom elements (VirtualNodes, or "VTrees").
 
 [![NPM version](http://img.shields.io/npm/v/chai-virtual-dom.svg?style=flat-square)](https://www.npmjs.org/package/chai-virtual-dom)
+[![Build Status](https://travis-ci.org/staltz/chai-virtual-dom.svg?branch=master)](https://travis-ci.org/staltz/chai-virtual-dom)
 
 #### Summary
 
