@@ -4,6 +4,25 @@ virtual-dom assertions for chai. Tests your virtual-dom elements (VirtualNodes, 
 
 [![NPM version](http://img.shields.io/npm/v/chai-virtual-dom.svg?style=flat-square)](https://www.npmjs.org/package/chai-virtual-dom)
 
+#### Summary
+
+```js
+// Approximate match
+//
+// Use .look.like() to do an approximate assertion
+// Must match: tagName, id, className.
+// Must match only if provided in expected: children.
+expect(myVTree).to.look.like(expected);
+```
+
+```js
+// Accurate match
+//
+// Use .look.exactly.like() to do an approximate assertion
+// Must match: tagName, id, className, and children.
+expect(myVTree).to.look.exactly.like(expected);
+```
+
 #### Example
 
 ```js
@@ -27,9 +46,6 @@ describe('My virtual-dom project', function () {
       h('h1.header'),
       h('ol.list')
     ]);
-    // Use .look.like() to do an approximate assertion
-    // Must match: tagName, id, className.
-    // Must match only if provided in expected: children.
     expect(myVTree).to.look.like(expected);
   });
 
@@ -42,8 +58,6 @@ describe('My virtual-dom project', function () {
         h('li', 'Third thing')
       ]),
     ]);
-    // Use .look.exactly.like() to do an approximate assertion
-    // Must match: tagName, id, className, and children.
     expect(myVTree).to.look.exactly.like(expected);
   });
 });
