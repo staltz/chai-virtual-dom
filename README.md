@@ -1,6 +1,6 @@
 # chai-virtual-dom
 
-virtual-dom assertions for chai. Tests your virtual-dom elements (VirtualNodes, or "VTrees").
+[virtual-dom](https://github.com/Matt-Esch/virtual-dom) assertions for chai. Tests your virtual-dom elements (VirtualNodes, or "VTrees").
 
 [![NPM version](http://img.shields.io/npm/v/chai-virtual-dom.svg?style=flat-square)](https://www.npmjs.org/package/chai-virtual-dom)
 
