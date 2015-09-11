@@ -10,7 +10,21 @@ function assertProperty(actualVTree, expectedVTree, prop) {
   );
 }
 
+function assertVirtualText(actualVTree, expectedVTree) {
+  this.assert(
+    actualVTree.text === expectedVTree.text,
+    'expected #{act} to be #{exp}',
+    'expected #{act} to not be #{exp}',
+    expectedVTree.text,
+    actualVTree.text
+  );
+}
+
 function assertVirtualNode(actualVTree, expectedVTree) {
+  if (actualVTree.type === 'VirtualText') {
+    assertVirtualText.call(this, actualVTree, expectedVTree);
+    return;
+  }
   this.assert(
     actualVTree.tagName === expectedVTree.tagName,
     'expected #{act} to have the same tagName as #{exp}',
@@ -27,7 +41,7 @@ function assertVirtualNode(actualVTree, expectedVTree) {
   );
   assertProperty.call(this, actualVTree, expectedVTree, 'id');
   assertProperty.call(this, actualVTree, expectedVTree, 'className');
-  for (let i = expectedVTree.children.length - 1; i >= 0; i--) {
+  for (var i = expectedVTree.children.length - 1; i >= 0; i--) {
     assertVirtualNode.call(this,
       actualVTree.children[i],
       expectedVTree.children[i]
@@ -37,7 +51,7 @@ function assertVirtualNode(actualVTree, expectedVTree) {
 
 function chaiVirtualDOMPlugin(chai) {
   chai.Assertion.addMethod('like', function like(expectedVTree) {
-    const actualVTree = this._obj;
+    var actualVTree = this._obj;
     assertVirtualNode.call(this, actualVTree, expectedVTree);
   });
 
