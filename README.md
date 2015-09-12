@@ -10,7 +10,7 @@
 ```js
 // Approximate match
 //
-// Use .look.like() to do an approximate assertion
+// Use .look.like() to do an approximate assertion.
 // Must match: tagName, id, className.
 // Must match only if provided in expected: children.
 expect(myVTree).to.look.like(expected);
@@ -19,7 +19,7 @@ expect(myVTree).to.look.like(expected);
 ```js
 // Accurate match
 //
-// Use .look.exactly.like() to do an approximate assertion
+// Use .look.exactly.like() to do a strict assertion.
 // Must match: tagName, id, className, and children.
 expect(myVTree).to.look.exactly.like(expected);
 ```
